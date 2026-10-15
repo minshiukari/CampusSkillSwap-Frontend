@@ -1,0 +1,946 @@
+/* ========================================
+   SHARED LAYOUT
+======================================== */
+
+.page-container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.muted-text {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.error-message {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.success-message {
+  padding: 12px 14px;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 14px;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.primary-button,
+.secondary-button,
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 18px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-weight: 700;
+  text-align: center;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primary-button {
+  background: var(--primary);
+  color: white;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.secondary-button {
+  border-color: var(--border);
+  background: white;
+  color: var(--text-primary);
+}
+
+.secondary-button:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.text-button {
+  min-height: auto;
+  padding: 5px 0;
+  background: transparent;
+  color: var(--primary);
+}
+
+.danger-button {
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.danger-button:hover:not(:disabled) {
+  border-color: #f87171;
+  background: #fef2f2;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* ========================================
+   HOME PAGE
+======================================== */
+
+.home-page {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(120, 106, 255, 0.12),
+      transparent 30%
+    ),
+    var(--background);
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+  padding-top: 75px;
+  padding-bottom: 85px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border: 1px solid #e4dfff;
+  border-radius: 999px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-title {
+  margin: 22px 0;
+  font-size: clamp(38px, 5.4vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2.5px;
+}
+
+.hero-title span {
+  color: var(--primary);
+}
+
+.hero-description {
+  max-width: 540px;
+  margin-bottom: 28px;
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  min-height: 360px;
+  place-items: center;
+}
+
+.hero-visual-card {
+  width: min(100%, 390px);
+  padding: 30px;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  border-radius: 28px;
+  background: white;
+  box-shadow: 0 25px 80px rgba(46, 35, 110, 0.12);
+  transform: rotate(2deg);
+}
+
+.hero-visual-card h3 {
+  margin: 18px 0 8px;
+  font-size: 22px;
+}
+
+.hero-visual-card > p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.hero-skill {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+}
+
+.hero-skill-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.hero-skill strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.hero-skill small {
+  color: var(--text-secondary);
+}
+
+.home-section {
+  padding-top: 45px;
+  padding-bottom: 85px;
+}
+
+.section-heading {
+  max-width: 620px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-bottom: 12px;
+  font-size: clamp(27px, 4vw, 38px);
+  letter-spacing: -1.2px;
+}
+
+.section-heading p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.feature-card {
+  padding: 27px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: white;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(30, 25, 80, 0.07);
+}
+
+.feature-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.feature-card p {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   REGISTRATION AND SKILLS FORMS
+======================================== */
+
+.register-page,
+.skills-page {
+  display: grid;
+  min-height: 100vh;
+  padding: 35px 20px;
+  place-items: center;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(120, 106, 255, 0.11),
+      transparent 28%
+    ),
+    var(--background);
+}
+
+.form-card {
+  width: min(100%, 540px);
+  padding: 38px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 20px 65px rgba(30, 25, 80, 0.07);
+}
+
+.form-card-header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.form-card-header .brand {
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.form-card-header h1 {
+  margin-bottom: 10px;
+  font-size: 29px;
+  letter-spacing: -1px;
+}
+
+.form-card-header p {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.form-fields {
+  display: grid;
+  gap: 19px;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  min-height: 47px;
+  padding: 12px 14px;
+  border: 1px solid #d9dce5;
+  border-radius: 11px;
+  outline: none;
+  background: white;
+  color: var(--text-primary);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(91, 75, 219, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-footer {
+  margin-top: 22px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ========================================
+   NOTIFICATIONS PAGE
+======================================== */
+
+.notifications-page {
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.notifications-heading {
+  margin: 25px 0 35px;
+}
+
+.notifications-heading h1 {
+  margin-bottom: 10px;
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: -1.5px;
+}
+
+.notifications-heading p {
+  margin-bottom: 0;
+}
+
+.notification-section {
+  margin-bottom: 38px;
+}
+
+.notification-section > h2 {
+  margin-bottom: 8px;
+  font-size: 23px;
+  letter-spacing: -0.5px;
+}
+
+.notification-section > .muted-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.student-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.student-card,
+.request-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(30, 25, 80, 0.025);
+}
+
+.student-card-main,
+.request-card-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  min-width: 0;
+}
+
+.student-avatar {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.student-details {
+  min-width: 0;
+}
+
+.student-details h3 {
+  margin-bottom: 5px;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.student-meta {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.student-skills {
+  display: grid;
+  gap: 6px;
+}
+
+.student-skills p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.student-skills strong {
+  color: var(--text-primary);
+}
+
+.student-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.student-actions .primary-button,
+.student-actions .secondary-button {
+  min-height: 39px;
+  padding: 9px 13px;
+  font-size: 13px;
+}
+
+.empty-state {
+  padding: 30px 20px;
+  border: 1px dashed #d9dce5;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.empty-state-icon {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 28px;
+}
+
+.empty-state h3 {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   REQUEST STATUS
+======================================== */
+
+.request-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-pending {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.status-accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.request-date {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* ========================================
+   CHAT PAGE
+======================================== */
+
+.chat-page {
+  min-height: 100vh;
+  padding-bottom: 35px;
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 850px);
+  height: min(76vh, 760px);
+  min-height: 420px;
+  margin: 10px auto 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 15px 50px rgba(30, 25, 80, 0.06);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.chat-header h1 {
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+
+.chat-header p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.chat-error {
+  margin: 12px 16px 0;
+}
+
+.chat-messages {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px;
+  overflow-y: auto;
+  background: #fafaff;
+}
+
+.chat-messages > .muted-text,
+.chat-messages > .empty-state {
+  margin: auto;
+}
+
+.message-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.message-row-own {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  width: fit-content;
+  max-width: min(78%, 520px);
+  padding: 12px 15px;
+  border-radius: 16px;
+  overflow-wrap: anywhere;
+}
+
+.message-other {
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 5px;
+  background: white;
+  color: var(--text-primary);
+}
+
+.message-own {
+  border-bottom-right-radius: 5px;
+  background: var(--primary);
+  color: white;
+}
+
+.message-bubble p {
+  margin-bottom: 7px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.message-bubble time {
+  display: block;
+  font-size: 11px;
+  opacity: 0.75;
+  text-align: right;
+}
+
+.chat-input-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  background: white;
+}
+
+.chat-input-form textarea {
+  flex: 1;
+  min-width: 0;
+  min-height: 45px;
+  max-height: 130px;
+  padding: 12px 14px;
+  resize: vertical;
+  border: 1px solid #d9dce5;
+  border-radius: 12px;
+  outline: none;
+  line-height: 1.5;
+}
+
+.chat-input-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(91, 75, 219, 0.1);
+}
+
+.chat-input-form .primary-button {
+  min-width: 85px;
+}
+
+/* ========================================
+   REUSABLE LOADING AND ERROR STATES
+======================================== */
+
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 160px;
+  color: var(--text-secondary);
+}
+
+.loading-state p {
+  margin: 0;
+}
+
+.loading-spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #e5e7eb;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reusable-error {
+  margin: 15px 0;
+}
+
+/* ========================================
+   RESPONSIVE LAYOUT
+======================================== */
+
+@media (max-width: 850px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 45px;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-card,
+  .request-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-actions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-container {
+    width: calc(100% - 28px);
+  }
+
+  .page-header {
+    padding: 18px 0;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 17px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero-title {
+    font-size: 39px;
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions > * {
+    width: 100%;
+  }
+
+  .hero-visual-card {
+    padding: 22px;
+  }
+
+  .form-card {
+    padding: 25px 20px;
+  }
+
+  .form-card-header h1 {
+    font-size: 25px;
+  }
+
+  .notifications-heading h1 {
+    font-size: 30px;
+  }
+
+  .student-card,
+  .request-card {
+    padding: 16px;
+  }
+
+  .student-card-main,
+  .request-card-main {
+    gap: 11px;
+  }
+
+  .student-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+  }
+
+  .student-actions .primary-button,
+  .student-actions .secondary-button {
+    flex: 1;
+  }
+
+  .chat-panel {
+    height: 72vh;
+    min-height: 380px;
+    border-radius: 14px;
+  }
+
+  .chat-header {
+    padding: 16px;
+  }
+
+  .chat-messages {
+    padding: 15px;
+  }
+
+  .chat-input-form {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .chat-input-form .primary-button {
+    min-width: 65px;
+    padding: 10px;
+  }
+
+  .message-bubble {
+    max-width: 88%;
+  }
+}
